@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bird : MonoBehaviour
 {
     public Rigidbody2D rigidbody2D;
-    public float jumpPower = 5;
+    public float flapPower = 5;
 
     void Start()
     {
@@ -14,9 +14,9 @@ public class Bird : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) == true)
         {
-            rigidbody2D.velocity = Vector2.up * jumpPower;
+            rigidbody2D.velocity = Vector2.up * flapPower;
         }
     }
 }
